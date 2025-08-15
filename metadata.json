@@ -1,0 +1,5 @@
+{
+  "name": "Saber Pro: Razonamiento Cuantitativo",
+  "description": "Una aplicación web para ayudar a los estudiantes a prepararse para el componente de Razonamiento Cuantitativo del examen Saber Pro. Ofrece cuestionarios de práctica, análisis de resultados y seguimiento del progreso.",
+  "requestFramePermissions": []
+}
