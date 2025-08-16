@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Question, AttemptResult, Statistics, Competency } from '../types';
 import { useLocalStorage } from '../hooks/useLocalStorage';
+import { ImageWithFallback } from './ImageWithFallback';
 
 interface QuizScreenProps {
   questions: Question[];
@@ -69,7 +70,7 @@ export const QuizScreen: React.FC<QuizScreenProps> = ({ questions, onFinish }) =
         <p className="text-lg text-slate-800 leading-relaxed mb-4">{question.statement}</p>
         {question.image && (
           <div className="my-4 flex justify-center bg-slate-50 p-2 rounded-lg border border-slate-200">
-            <img 
+            <ImageWithFallback
               src={question.image} 
               alt="Referencia para la pregunta" 
               className="max-w-full md:max-w-lg h-auto object-contain rounded-md"

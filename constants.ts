@@ -21,7 +21,7 @@ export const QUESTIONS: Question[] = [
     id: 'q002',
     competency: Competency.Interpretation,
     statement: 'En cierto país, una persona es considerada joven si su edad es menor o igual a 30 años. El siguiente diagrama muestra la distribución de las edades para ese país.',
-    image: 'https://raw.githubusercontent.com/andresmgrisales/SABER-PRO/main/public/images/distrubucion_edades.png',
+    image: 'distrubucion_edades.png',
     options: [
       { key: 'A', text: 'Sí, porque las personas de 30 años pertenecen a la porción más grande.' },
       { key: 'B', text: 'No, porque se desconoce la proporción de personas entre 31 y 35 años.' },
@@ -35,7 +35,7 @@ export const QUESTIONS: Question[] = [
     id: 'q002',
     competency: Competency.Interpretation,
     statement: 'Un sistema de transporte urbano en una ciudad de Colombia utiliza dos tipos de buses. La tabla muestra la información del número de pasajeros que puede transportar cada tipo de bus.',
-    image: 'https://andresmgrisales.github.io/SABER-PRO/images/trasnporte.png',
+    image: 'trasnporte.png',
     options: [
       { key: 'A', text: 'Se requieren más buses tipo I que tipo II para transportar el mismo número de pasajeros.' },
       { key: 'B', text: 'La capacidad total de pasajeros sentados es mayor en los buses tipo II.' },
