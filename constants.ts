@@ -1,13 +1,19 @@
 import { Question, Competency } from './types';
+import { images } from './src/assets';
 
 export const TOTAL_QUESTIONS_PER_QUIZ = 20;
+
+export const getImageUrl = (imageName: string | undefined): string | undefined => {
+  if (!imageName) return undefined;
+  return images[imageName as keyof typeof images];
+};
 
 export const QUESTIONS: Question[] = [
   {
     id: 'q001',
     competency: Competency.Interpretation,
     statement: 'En cierto país, una persona es considerada joven si su edad es menor o igual a 30 años. El siguiente diagrama muestra la distribución de las edades para ese país.',
-    image: '/SABER-PRO/images/distrubucion_edades.png',
+    image: 'distrubucion_edades.png',
     options: [
       { key: 'A', text: 'Sí, porque las personas de 30 años pertenecen a la porción más grande.' },
       { key: 'B', text: 'No, porque se desconoce la proporción de personas entre 31 y 35 años.' },
