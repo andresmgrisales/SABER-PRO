@@ -2,18 +2,12 @@ import { Question, Competency } from './types';
 
 export const TOTAL_QUESTIONS_PER_QUIZ = 20;
 
-export const getImageUrl = (imageName: string | undefined): string | undefined => {
-  if (!imageName) return undefined;
-  // Intentar múltiples rutas como fallback
-  return `https://andresmgrisales.github.io/SABER-PRO/images/${imageName}`;
-};
-
 export const QUESTIONS: Question[] = [
   {
     id: 'q001',
     competency: Competency.Interpretation,
     statement: 'En cierto país, una persona es considerada joven si su edad es menor o igual a 30 años. El siguiente diagrama muestra la distribución de las edades para ese país.',
-    image: 'distrubucion_edades.png',
+    image: 'https://andresmgrisales.github.io/SABER-PRO/images/distrubucion_edades.png',
     options: [
       { key: 'A', text: 'Sí, porque las personas de 30 años pertenecen a la porción más grande.' },
       { key: 'B', text: 'No, porque se desconoce la proporción de personas entre 31 y 35 años.' },
@@ -27,7 +21,7 @@ export const QUESTIONS: Question[] = [
     id: 'q002',
     competency: Competency.Interpretation,
     statement: 'Un sistema de transporte urbano en una ciudad de Colombia utiliza dos tipos de buses. La tabla muestra la información del número de pasajeros que puede transportar cada tipo de bus.',
-    image: './images/trasnporte.png',
+    image: 'https://andresmgrisales.github.io/SABER-PRO/images/trasnporte.png',
     options: [
       { key: 'A', text: 'Se requieren más buses tipo I que tipo II para transportar el mismo número de pasajeros.' },
       { key: 'B', text: 'La capacidad total de pasajeros sentados es mayor en los buses tipo II.' },
@@ -55,7 +49,7 @@ export const QUESTIONS: Question[] = [
     id: 'q004',
     competency: Competency.Interpretation,
     statement: 'En el 2013, el presupuesto de inversión en el sector salud del país fue de 3,65 billones de pesos. La gráfica muestra el porcentaje de ejecución hasta mayo del 2013, el porcentaje máximo ejecutado y el porcentaje promedio acumulado de ejecución de cada mes, en los años 2002 a 2012.',
-    image: '/images/acumulados_salud.png',
+    image: 'https://andresmgrisales.github.io/SABER-PRO/images/acumulados_salud.png',
     options: [
       { key: 'A', text: 'El presupuesto ejecutado superó el promedio histórico.' },
       { key: 'B', text: 'La ejecución fue más eficiente que en años anteriores.' },

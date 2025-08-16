@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Question, AttemptResult, Statistics, Competency } from '../types';
 import { useLocalStorage } from '../hooks/useLocalStorage';
-import { getImageUrl } from '../constants';
 
 interface QuizScreenProps {
   questions: Question[];
@@ -71,7 +70,7 @@ export const QuizScreen: React.FC<QuizScreenProps> = ({ questions, onFinish }) =
         {question.image && (
           <div className="my-4 flex justify-center bg-slate-50 p-2 rounded-lg border border-slate-200">
             <img 
-              src={getImageUrl(question.image)} 
+              src={question.image} 
               alt="Referencia para la pregunta" 
               className="max-w-full md:max-w-lg h-auto object-contain rounded-md"
             />
