@@ -4,12 +4,14 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
+    const isGitHubPages = true;
+    const base = isGitHubPages ? '/SABER-PRO/' : '/';
     return {
       plugins: [react()],
-      base: '',
+      base,
       build: {
         outDir: 'dist',
-        assetsDir: '.',
+        assetsDir: 'assets',
         sourcemap: true,
         assetsInlineLimit: 0,
         rollupOptions: {
@@ -21,10 +23,10 @@ export default defineConfig(({ mode }) => {
                   assetInfo.name.endsWith('.gif')) {
                 return 'images/[name][extname]';
               }
-              return '[name]-[hash][extname]';
+              return 'assets/[name]-[hash][extname]';
             },
-            chunkFileNames: '[name]-[hash].js',
-            entryFileNames: '[name]-[hash].js',
+            chunkFileNames: 'js/[name]-[hash].js',
+            entryFileNames: 'js/[name]-[hash].js',
           }
         }
       },
