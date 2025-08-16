@@ -49,13 +49,12 @@ export interface CompetencyAnalysis {
 }
 
 export interface Attempt {
-    id: string;
-    date: string;
-    score: number;
-    analysis: {
-        [key in Competency]: CompetencyAnalysis;
-    };
-    incorrectQuestions: IncorrectQuestion[];
+  date: string;
+  score: number;
+  totalQuestions: number;
+  correctAnswers: number;
+  incorrectQuestions: IncorrectQuestion[];
+  analysis: Record<Competency, { total: number; correct: number }>;
 }
 
-export type GameState = 'home' | 'quiz' | 'results' | 'stats';
+export type GameState = 'home' | 'quiz' | 'results';

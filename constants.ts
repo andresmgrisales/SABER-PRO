@@ -7,7 +7,7 @@ export const QUESTIONS: Question[] = [
     id: 'q001',
     competency: Competency.Interpretation,
     statement: 'En cierto país, una persona es considerada joven si su edad es menor o igual a 30 años. El siguiente diagrama muestra la distribución de las edades para ese país.',
-    image: '/images/distrubucion_edades.png',
+    image: './images/distrubucion_edades.png',
     options: [
       { key: 'A', text: 'Sí, porque las personas de 30 años pertenecen a la porción más grande.' },
       { key: 'B', text: 'No, porque se desconoce la proporción de personas entre 31 y 35 años.' },
@@ -21,7 +21,7 @@ export const QUESTIONS: Question[] = [
     id: 'q002',
     competency: Competency.Interpretation,
     statement: 'Un sistema de transporte urbano en una ciudad de Colombia utiliza dos tipos de buses. La tabla muestra la información del número de pasajeros que puede transportar cada tipo de bus.',
-    image: '/images/trasnporte.png',
+    image: './images/trasnporte.png',
     options: [
       { key: 'A', text: 'Se requieren más buses tipo I que tipo II para transportar el mismo número de pasajeros.' },
       { key: 'B', text: 'La capacidad total de pasajeros sentados es mayor en los buses tipo II.' },
@@ -35,7 +35,7 @@ export const QUESTIONS: Question[] = [
     id: 'q003',
     competency: Competency.Formulation,
     statement: 'El capitán de una embarcación debe dirigir su barco desde el puerto O hasta el puerto Q, pasando por el puerto P. En el trayecto de O a P mantuvo una velocidad constante de 27 nudos; sin embargo, al momento de zarpar del puerto P con rumbo al puerto Q, su velocímetro se averió y tuvo que usar un repuesto extranjero que marcó durante todo el trayecto una velocidad de 50 km/h.',
-    image: '/images/nudos.png',
+    image: './images/nudos.png',
     options: [
       { key: 'A', text: 'Convertir nudos a km/h para todo el trayecto' },
       { key: 'B', text: 'Calcular el tiempo para cada tramo por separado' },

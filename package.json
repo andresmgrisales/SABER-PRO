@@ -1,5 +1,5 @@
 {
-  "name": "saber-pro:-razonamiento-cuantitativo",
+  "name": "saber-pro-razonamiento-cuantitativo",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -11,19 +11,19 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
-    "react": "^19.1.1",
-    "react-dom": "^19.1.1"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@tailwindcss/postcss7-compat": "^2.2.17",
-    "@types/node": "^22.14.0",
-    "@vitejs/plugin-react": "^5.0.0",
-    "autoprefixer": "^10.4.21",
-    "gh-pages": "^6.3.0",
-    "postcss": "^8.5.6",
-    "postcss-cli": "^10.1.0",
+    "@types/node": "^20.11.0",
+    "@types/react": "^18.2.48",
+    "@types/react-dom": "^18.2.18",
+    "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.16",
+    "gh-pages": "^6.1.1",
+    "postcss": "^8.4.33",
     "tailwindcss": "^3.4.1",
-    "typescript": "~5.8.2",
-    "vite": "^6.2.0"
+    "typescript": "^5.3.3",
+    "vite": "^5.0.11"
   }
 }

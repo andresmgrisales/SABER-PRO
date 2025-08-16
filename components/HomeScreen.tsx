@@ -57,7 +57,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({ onStartQuiz, attempts })
           {attempts.length > 0 ? (
             <div className="space-y-2 max-h-48 overflow-y-auto pr-2">
               {attempts.map(attempt => (
-                <div key={attempt.id} className="flex justify-between items-center bg-white p-2 rounded-md border">
+                <div key={attempt.date} className="flex justify-between items-center bg-white p-2 rounded-md border">
                   <span className="text-sm text-slate-500">{attempt.date}</span>
                   <span className={`font-bold text-sm ${attempt.score >= 70 ? 'text-green-600' : attempt.score >= 50 ? 'text-yellow-600' : 'text-red-600'}`}>
                     {attempt.score}%
