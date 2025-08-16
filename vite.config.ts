@@ -6,10 +6,10 @@ export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
     return {
       plugins: [react()],
-      base: './',
+      base: '',
       build: {
         outDir: 'dist',
-        assetsDir: 'assets',
+        assetsDir: '.',
         sourcemap: true,
         assetsInlineLimit: 0,
         rollupOptions: {
@@ -21,10 +21,10 @@ export default defineConfig(({ mode }) => {
                   assetInfo.name.endsWith('.gif')) {
                 return 'images/[name][extname]';
               }
-              return 'assets/[name]-[hash][extname]';
+              return '[name]-[hash][extname]';
             },
-            chunkFileNames: 'js/[name]-[hash].js',
-            entryFileNames: 'js/[name]-[hash].js',
+            chunkFileNames: '[name]-[hash].js',
+            entryFileNames: '[name]-[hash].js',
           }
         }
       },
