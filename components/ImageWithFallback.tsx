@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 interface ImageWithFallbackProps {
   src: string;
@@ -7,39 +7,77 @@ interface ImageWithFallbackProps {
 }
 
 export const ImageWithFallback: React.FC<ImageWithFallbackProps> = ({ src, alt, className }) => {
-  // Si src es solo un nombre de archivo, empezar con la primera URL de fallback
-  const fileName = src.includes('://') ? src.split('/').pop() || '' : src;
-  const initialSrc = src.includes('://') ? src : `https://raw.githubusercontent.com/andresmgrisales/SABER-PRO/main/public/images/${fileName}`;
-  
-  const [currentSrc, setCurrentSrc] = useState(initialSrc);
+  const [currentSrc, setCurrentSrc] = useState('');
   const [hasError, setHasError] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
-  const handleError = () => {
-    console.log('Error loading image:', currentSrc);
-    
-    // Lista de URLs de fallback en orden de prioridad
-    const fallbackUrls = [
-      `https://raw.githubusercontent.com/andresmgrisales/SABER-PRO/main/public/images/${fileName}`,
-      `https://andresmgrisales.github.io/SABER-PRO/images/${fileName}`,
-      `./images/${fileName}`,
-      `/SABER-PRO/images/${fileName}`,
-      'https://via.placeholder.com/400x300/cccccc/666666?text=Imagen+No+Disponible'
-    ];
-    
-    const currentIndex = fallbackUrls.indexOf(currentSrc);
-    const nextIndex = currentIndex + 1;
-    
-    if (nextIndex < fallbackUrls.length) {
-      console.log('Trying fallback:', fallbackUrls[nextIndex]);
-      setCurrentSrc(fallbackUrls[nextIndex]);
-      setHasError(false);
-    } else {
-      console.log('All fallbacks failed');
-      setHasError(true);
-    }
-  };
+  // Determinar el nombre del archivo
+  const fileName = src.includes('://') ? src.split('/').pop() || '' : src;
 
-  if (hasError) {
+  // Lista de URLs para probar en orden
+  const urlsToTry = [
+    `https://raw.githubusercontent.com/andresmgrisales/SABER-PRO/main/public/images/${fileName}`,
+    `https://andresmgrisales.github.io/SABER-PRO/images/${fileName}`,
+    `/SABER-PRO/images/${fileName}`,
+    `./images/${fileName}`,
+    src // URL original como último recurso
+  ];
+
+  useEffect(() => {
+    let isMounted = true;
+    
+    const tryNextUrl = async (index: number = 0) => {
+      if (index >= urlsToTry.length) {
+        if (isMounted) {
+          setHasError(true);
+          setIsLoading(false);
+        }
+        return;
+      }
+
+      const url = urlsToTry[index];
+      console.log(`Trying image URL ${index + 1}/${urlsToTry.length}:`, url);
+
+      try {
+        const img = new Image();
+        
+        img.onload = () => {
+          if (isMounted) {
+            console.log('✅ Image loaded successfully:', url);
+            setCurrentSrc(url);
+            setHasError(false);
+            setIsLoading(false);
+          }
+        };
+
+        img.onerror = () => {
+          console.log('❌ Failed to load:', url);
+          tryNextUrl(index + 1);
+        };
+
+        img.src = url;
+      } catch (error) {
+        console.log('❌ Error trying:', url, error);
+        tryNextUrl(index + 1);
+      }
+    };
+
+    tryNextUrl();
+
+    return () => {
+      isMounted = false;
+    };
+  }, [fileName]);
+
+  if (isLoading) {
+    return (
+      <div className={`${className} bg-gray-100 border border-gray-300 flex items-center justify-center text-gray-500`}>
+        <span>Cargando imagen...</span>
+      </div>
+    );
+  }
+
+  if (hasError || !currentSrc) {
     return (
       <div className={`${className} bg-gray-100 border-2 border-dashed border-gray-300 flex items-center justify-center text-gray-500`}>
         <span>Imagen no disponible</span>
@@ -52,8 +90,10 @@ export const ImageWithFallback: React.FC<ImageWithFallbackProps> = ({ src, alt, 
       src={currentSrc}
       alt={alt}
       className={className}
-      onError={handleError}
-      onLoad={() => console.log('Image loaded successfully:', currentSrc)}
+      onError={() => {
+        console.log('❌ Final image error:', currentSrc);
+        setHasError(true);
+      }}
     />
   );
 };
