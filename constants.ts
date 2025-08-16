@@ -21,7 +21,7 @@ export const QUESTIONS: Question[] = [
     id: 'q002',
     competency: Competency.Interpretation,
     statement: 'En cierto país, una persona es considerada joven si su edad es menor o igual a 30 años. El siguiente diagrama muestra la distribución de las edades para ese país.',
-    image: 'https://andresmgrisales.github.io/SABER-PRO/images/distrubucion_edades.png',
+    image: 'https://raw.githubusercontent.com/andresmgrisales/SABER-PRO/main/public/images/distrubucion_edades.png',
     options: [
       { key: 'A', text: 'Sí, porque las personas de 30 años pertenecen a la porción más grande.' },
       { key: 'B', text: 'No, porque se desconoce la proporción de personas entre 31 y 35 años.' },
