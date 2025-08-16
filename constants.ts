@@ -6,6 +6,20 @@ export const QUESTIONS: Question[] = [
   {
     id: 'q001',
     competency: Competency.Interpretation,
+    statement: 'Pregunta de prueba con imagen de internet para verificar que el componente funciona.',
+    image: 'https://via.placeholder.com/400x300/0066cc/ffffff?text=Imagen+de+Prueba',
+    options: [
+      { key: 'A', text: 'Opción A de prueba' },
+      { key: 'B', text: 'Opción B de prueba' },
+      { key: 'C', text: 'Opción C de prueba' },
+      { key: 'D', text: 'Opción D de prueba' }
+    ],
+    correctAnswer: 'A',
+    explanation: 'Esta es una pregunta de prueba para verificar que las imágenes se muestran correctamente.'
+  },
+  {
+    id: 'q002',
+    competency: Competency.Interpretation,
     statement: 'En cierto país, una persona es considerada joven si su edad es menor o igual a 30 años. El siguiente diagrama muestra la distribución de las edades para ese país.',
     image: 'https://andresmgrisales.github.io/SABER-PRO/images/distrubucion_edades.png',
     options: [
