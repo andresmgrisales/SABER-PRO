@@ -4,9 +4,8 @@ export const TOTAL_QUESTIONS_PER_QUIZ = 20;
 
 export const getImageUrl = (imageName: string | undefined): string | undefined => {
   if (!imageName) return undefined;
-  // En producción, las imágenes están en ./images/
-  // En desarrollo, usamos la carpeta public
-  return `./images/${imageName}`;
+  // Intentar múltiples rutas como fallback
+  return `https://andresmgrisales.github.io/SABER-PRO/images/${imageName}`;
 };
 
 export const QUESTIONS: Question[] = [
