@@ -28,7 +28,8 @@ export default defineConfig(({ mode }) => {
             chunkFileNames: 'js/[name]-[hash].js',
             entryFileNames: 'js/[name]-[hash].js',
           }
-        }
+        },
+        copyPublicDir: true
       },
       publicDir: 'public',
       define: {
