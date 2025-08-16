@@ -6,7 +6,7 @@ export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
     return {
       plugins: [react()],
-      base: '/SABER-PRO/',
+      base: './',
       build: {
         outDir: 'dist',
         assetsDir: 'assets',
