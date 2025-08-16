@@ -1,11 +1,12 @@
 import { Question, Competency } from './types';
-import { images } from './src/assets';
 
 export const TOTAL_QUESTIONS_PER_QUIZ = 20;
 
 export const getImageUrl = (imageName: string | undefined): string | undefined => {
   if (!imageName) return undefined;
-  return images[imageName as keyof typeof images];
+  // En producción, las imágenes están en ./images/
+  // En desarrollo, usamos la carpeta public
+  return `./images/${imageName}`;
 };
 
 export const QUESTIONS: Question[] = [
