@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 interface ImageWithFallbackProps {
   src: string;
@@ -7,92 +7,24 @@ interface ImageWithFallbackProps {
 }
 
 export const ImageWithFallback: React.FC<ImageWithFallbackProps> = ({ src, alt, className }) => {
-  const [currentSrc, setCurrentSrc] = useState('');
-  const [hasError, setHasError] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
-
-  // Determinar el nombre del archivo
+  // Si es solo un nombre de archivo, usar directamente GitHub Raw URL
   const fileName = src.includes('://') ? src.split('/').pop() || '' : src;
+  const imageUrl = src.includes('://') 
+    ? src 
+    : `https://raw.githubusercontent.com/andresmgrisales/SABER-PRO/main/public/images/${fileName}`;
 
-  // Lista de URLs para probar en orden
-  const urlsToTry = [
-    `https://raw.githubusercontent.com/andresmgrisales/SABER-PRO/main/public/images/${fileName}`,
-    `https://andresmgrisales.github.io/SABER-PRO/images/${fileName}`,
-    `/SABER-PRO/images/${fileName}`,
-    `./images/${fileName}`,
-    src // URL original como último recurso
-  ];
-
-  useEffect(() => {
-    let isMounted = true;
-    
-    const tryNextUrl = async (index: number = 0) => {
-      if (index >= urlsToTry.length) {
-        if (isMounted) {
-          setHasError(true);
-          setIsLoading(false);
-        }
-        return;
-      }
-
-      const url = urlsToTry[index];
-      console.log(`Trying image URL ${index + 1}/${urlsToTry.length}:`, url);
-
-      try {
-        const img = new Image();
-        
-        img.onload = () => {
-          if (isMounted) {
-            console.log('✅ Image loaded successfully:', url);
-            setCurrentSrc(url);
-            setHasError(false);
-            setIsLoading(false);
-          }
-        };
-
-        img.onerror = () => {
-          console.log('❌ Failed to load:', url);
-          tryNextUrl(index + 1);
-        };
-
-        img.src = url;
-      } catch (error) {
-        console.log('❌ Error trying:', url, error);
-        tryNextUrl(index + 1);
-      }
-    };
-
-    tryNextUrl();
-
-    return () => {
-      isMounted = false;
-    };
-  }, [fileName]);
-
-  if (isLoading) {
-    return (
-      <div className={`${className} bg-gray-100 border border-gray-300 flex items-center justify-center text-gray-500`}>
-        <span>Cargando imagen...</span>
-      </div>
-    );
-  }
-
-  if (hasError || !currentSrc) {
-    return (
-      <div className={`${className} bg-gray-100 border-2 border-dashed border-gray-300 flex items-center justify-center text-gray-500`}>
-        <span>Imagen no disponible</span>
-      </div>
-    );
-  }
+  console.log('🖼️ Loading image:', imageUrl);
 
   return (
     <img 
-      src={currentSrc}
+      src={imageUrl}
       alt={alt}
       className={className}
-      onError={() => {
-        console.log('❌ Final image error:', currentSrc);
-        setHasError(true);
+      onLoad={() => console.log('✅ Image loaded successfully:', imageUrl)}
+      onError={(e) => {
+        console.log('❌ Image failed to load:', imageUrl);
+        // Mostrar un placeholder si falla
+        (e.target as HTMLImageElement).src = 'https://via.placeholder.com/400x300/cccccc/666666?text=Imagen+No+Disponible';
       }}
     />
   );

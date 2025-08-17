@@ -343,7 +343,7 @@ export const QUESTIONS: Question[] = [
     id: 'q024',
     competency: Competency.Argumentation,
     statement: 'Al analizar los resultados del estudio de las aves, el científico afirma que la relación entre cada tiempo de las actividades del ave 1 y del ave 5 es 3:2. Esta afirmación es:',
-    image: '/images/aves.png',
+    image: 'aves.png',
     options: [
       { key: 'A', text: 'Correcta para todas las actividades.' },
       { key: 'B', text: 'Incorrecta para algunas actividades.' },
