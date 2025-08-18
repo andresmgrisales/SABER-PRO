@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Question, AttemptResult, Statistics, Competency } from '../types';
 import { useLocalStorage } from '../hooks/useLocalStorage';
-import { ImageWithFallback } from './ImageWithFallback';
 
 interface QuizScreenProps {
   questions: Question[];
@@ -69,17 +68,20 @@ export const QuizScreen: React.FC<QuizScreenProps> = ({ questions, onFinish }) =
       <div className="mb-8">
         <p className="text-lg text-slate-800 leading-relaxed mb-4">{question.statement}</p>
         {question.image && (
-          <div className="my-4 p-4 bg-blue-50 border-l-4 border-blue-400 rounded-lg">
-            <div className="flex items-start">
-              <div className="text-blue-500 text-xl mr-3">📊</div>
-              <div>
-                <p className="text-blue-800 font-medium mb-1">Imagen de referencia requerida:</p>
-                <p className="text-blue-700 text-sm">
-                  Esta pregunta incluye una imagen/gráfica/tabla que es necesaria para responder correctamente. 
-                  Imagen: <code className="bg-blue-100 px-1 rounded">{question.image}</code>
-                </p>
-              </div>
-            </div>
+          <div className="my-4 flex justify-center bg-slate-50 p-2 rounded-lg border border-slate-200">
+            <img 
+              src={`https://raw.githubusercontent.com/andresmgrisales/SABER-PRO/main/public/images/${question.image.replace('/images/', '').replace('./images/', '')}`}
+              alt="Referencia para la pregunta" 
+              className="max-w-full md:max-w-lg h-auto object-contain rounded-md"
+              onError={(e) => {
+                console.log('Error loading image:', question.image);
+                (e.target as HTMLImageElement).style.display = 'none';
+                const errorDiv = document.createElement('div');
+                errorDiv.className = 'bg-red-50 border border-red-200 rounded p-4 text-red-700 text-center';
+                errorDiv.innerHTML = `⚠️ Imagen requerida: ${question.image}`;
+                (e.target as HTMLImageElement).parentNode?.appendChild(errorDiv);
+              }}
+            />
           </div>
         )}
         <div className="space-y-3">
