@@ -1,5 +1,40 @@
 import React from 'react';
-import { getImageByFilename } from '../src/assets/images';
+
+// Importar las imágenes directamente
+import aves from '../src/assets/images/aves.png';
+import distrubucionEdades from '../src/assets/images/distrubucion_edades.png';
+import trasnporte from '../src/assets/images/trasnporte.png';
+import aviones from '../src/assets/images/aviones.png';
+import jabon from '../src/assets/images/jabon.png';
+import sismos from '../src/assets/images/sismos.png';
+import herencia from '../src/assets/images/herencia.png';
+import seguridadVial from '../src/assets/images/seguridad_vial.png';
+import fuenteChocolate from '../src/assets/images/fuente_chocolate.png';
+import aspirantes from '../src/assets/images/aspirantes.png';
+import aspirantes2 from '../src/assets/images/aspirantes2.png';
+import aspirantes3 from '../src/assets/images/aspirantes3.png';
+import pilates from '../src/assets/images/pilates.png';
+import jabon2 from '../src/assets/images/jabon2.png';
+import torneos from '../src/assets/images/torneos.png';
+
+// Mapeo de nombres de archivo a imágenes importadas
+const imageMap: Record<string, string> = {
+  'aves.png': aves,
+  'distrubucion_edades.png': distrubucionEdades,
+  'trasnporte.png': trasnporte,
+  'aviones.png': aviones,
+  'jabon.png': jabon,
+  'sismos.png': sismos,
+  'herencia.png': herencia,
+  'seguridad_vial.png': seguridadVial,
+  'fuente_chocolate.png': fuenteChocolate,
+  'aspirantes.png': aspirantes,
+  'aspirantes2.png': aspirantes2,
+  'aspirantes3.png': aspirantes3,
+  'pilates.png': pilates,
+  'jabon2.png': jabon2,
+  'torneos.png': torneos,
+};
 
 interface ImageWithFallbackProps {
   src: string;
@@ -16,9 +51,10 @@ export const ImageWithFallback: React.FC<ImageWithFallbackProps> = ({ src, alt, 
   if (src.includes('://')) {
     // Si ya es una URL completa, usarla tal como está
     imageUrl = src;
+    console.log('🌐 Using provided URL:', imageUrl);
   } else {
-    // Obtener la imagen importada por Vite
-    const importedImage = getImageByFilename(fileName);
+    // Buscar la imagen en el mapeo
+    const importedImage = imageMap[fileName];
     if (importedImage) {
       imageUrl = importedImage;
       console.log('✅ Using Vite imported image for:', fileName, '→', imageUrl);
