@@ -69,12 +69,17 @@ export const QuizScreen: React.FC<QuizScreenProps> = ({ questions, onFinish }) =
       <div className="mb-8">
         <p className="text-lg text-slate-800 leading-relaxed mb-4">{question.statement}</p>
         {question.image && (
-          <div className="my-4 flex justify-center bg-slate-50 p-2 rounded-lg border border-slate-200">
-            <ImageWithFallback
-              src={question.image} 
-              alt="Referencia para la pregunta" 
-              className="max-w-full md:max-w-lg h-auto object-contain rounded-md"
-            />
+          <div className="my-4 p-4 bg-blue-50 border-l-4 border-blue-400 rounded-lg">
+            <div className="flex items-start">
+              <div className="text-blue-500 text-xl mr-3">📊</div>
+              <div>
+                <p className="text-blue-800 font-medium mb-1">Imagen de referencia requerida:</p>
+                <p className="text-blue-700 text-sm">
+                  Esta pregunta incluye una imagen/gráfica/tabla que es necesaria para responder correctamente. 
+                  Imagen: <code className="bg-blue-100 px-1 rounded">{question.image}</code>
+                </p>
+              </div>
+            </div>
           </div>
         )}
         <div className="space-y-3">

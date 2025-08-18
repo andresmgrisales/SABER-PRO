@@ -342,7 +342,7 @@ export const QUESTIONS: Question[] = [
   {
     id: 'q024',
     competency: Competency.Argumentation,
-    statement: 'Al analizar los resultados del estudio de las aves, el científico afirma que la relación entre cada tiempo de las actividades del ave 1 y del ave 5 es 3:2. Esta afirmación es:',
+    statement: 'Al analizar los resultados del estudio de las aves, el científico afirma que la relación entre cada tiempo de las actividades del ave 1 y del ave 5 es 3:2. [TABLA DE REFERENCIA: Muestra 5 aves con sus tiempos de alimentación, descanso, desplazamiento y defecación en minutos durante 4 sesiones de 30 min cada una]. Esta afirmación es:',
     image: 'aves.png',
     options: [
       { key: 'A', text: 'Correcta para todas las actividades.' },
@@ -356,7 +356,7 @@ export const QUESTIONS: Question[] = [
   {
     id: 'q025',
     competency: Competency.Formulation,
-    statement: 'La etiqueta del jabón debe especificar tres aspectos: presentación, contenido y aroma. De acuerdo con la información proporcionada donde cada presentación y contenido está disponible en tres aromas (natural, coco y vainilla), ¿cuántas etiquetas diferentes debe utilizar la fábrica?',
+    statement: 'La etiqueta del jabón debe especificar tres aspectos: presentación, contenido y aroma. [TABLA DE REFERENCIA: Muestra que hay 2 presentaciones (frasco, envase), 3 contenidos (300mL, 500mL, 700mL) disponibles en 3 aromas cada uno (natural, coco, vainilla)]. De acuerdo con esta información, ¿cuántas etiquetas diferentes debe utilizar la fábrica?',
     image: '/images/jabon.png',
     options: [
       { key: 'A', text: '9 etiquetas diferentes' },
