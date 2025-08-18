@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 // Importar las imágenes directamente
 import aves from '../src/assets/images/aves.png';
@@ -43,6 +43,9 @@ interface ImageWithFallbackProps {
 }
 
 export const ImageWithFallback: React.FC<ImageWithFallbackProps> = ({ src, alt, className }) => {
+  const [imageLoaded, setImageLoaded] = useState(false);
+  const [imageError, setImageError] = useState(false);
+  
   // Si es solo un nombre de archivo, usar la imagen importada
   const fileName = src.includes('://') ? src.split('/').pop() || '' : src;
   
@@ -65,17 +68,42 @@ export const ImageWithFallback: React.FC<ImageWithFallbackProps> = ({ src, alt, 
     }
   }
 
+  // Si hubo error, mostrar mensaje
+  if (imageError) {
+    return (
+      <div className={`${className} bg-yellow-50 border-2 border-yellow-200 rounded-lg p-8 flex flex-col items-center justify-center text-yellow-800 min-h-[200px]`}>
+        <div className="text-4xl mb-2">⚠️</div>
+        <div className="text-center">
+          <div className="font-semibold mb-1">Imagen requerida para esta pregunta</div>
+          <div className="text-sm">La imagen es necesaria para responder correctamente</div>
+        </div>
+      </div>
+    );
+  }
+
   return (
-    <img 
-      src={imageUrl}
-      alt={alt}
-      className={className}
-      onLoad={() => console.log('✅ Image loaded successfully:', imageUrl)}
-      onError={(e) => {
-        console.log('❌ Image failed to load:', imageUrl);
-        // Último recurso: placeholder
-        (e.target as HTMLImageElement).src = 'https://via.placeholder.com/400x300/e2e8f0/64748b?text=Imagen+Requerida+Para+La+Pregunta';
-      }}
-    />
+    <>
+      {!imageLoaded && (
+        <div className={`${className} bg-blue-50 border border-blue-200 rounded-lg p-8 flex items-center justify-center text-blue-600 min-h-[200px]`}>
+          <div className="text-center">
+            <div className="animate-spin text-2xl mb-2">⏳</div>
+            <div>Cargando imagen...</div>
+          </div>
+        </div>
+      )}
+      <img 
+        src={imageUrl}
+        alt={alt}
+        className={`${className} ${!imageLoaded ? 'hidden' : ''}`}
+        onLoad={() => {
+          console.log('✅ Image loaded successfully:', imageUrl);
+          setImageLoaded(true);
+        }}
+        onError={(e) => {
+          console.log('❌ Image failed to load:', imageUrl);
+          setImageError(true);
+        }}
+      />
+    </>
   );
 };
