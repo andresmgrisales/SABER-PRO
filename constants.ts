@@ -49,7 +49,7 @@ export const QUESTIONS: Question[] = [
     id: 'q003',
     competency: Competency.Formulation,
     statement: 'El capitán de una embarcación debe dirigir su barco desde el puerto O hasta el puerto Q, pasando por el puerto P. En el trayecto de O a P mantuvo una velocidad constante de 27 nudos; sin embargo, al momento de zarpar del puerto P con rumbo al puerto Q, su velocímetro se averió y tuvo que usar un repuesto extranjero que marcó durante todo el trayecto una velocidad de 50 km/h.',
-    image: './images/nudos.png',
+    image: 'nudos.png',
     options: [
       { key: 'A', text: 'Convertir nudos a km/h para todo el trayecto' },
       { key: 'B', text: 'Calcular el tiempo para cada tramo por separado' },
@@ -63,7 +63,7 @@ export const QUESTIONS: Question[] = [
     id: 'q004',
     competency: Competency.Interpretation,
     statement: 'En el 2013, el presupuesto de inversión en el sector salud del país fue de 3,65 billones de pesos. La gráfica muestra el porcentaje de ejecución hasta mayo del 2013, el porcentaje máximo ejecutado y el porcentaje promedio acumulado de ejecución de cada mes, en los años 2002 a 2012.',
-    image: 'https://andresmgrisales.github.io/SABER-PRO/images/acumulados_salud.png',
+    image: 'acumulados_salud.png',
     options: [
       { key: 'A', text: 'El presupuesto ejecutado superó el promedio histórico.' },
       { key: 'B', text: 'La ejecución fue más eficiente que en años anteriores.' },
@@ -77,7 +77,7 @@ export const QUESTIONS: Question[] = [
     id: 'q005',
     competency: Competency.Formulation,
     statement: 'Si se espera que en octubre de 2013 el porcentaje de ejecución sea del 70%, la cantidad de dinero invertida en el sector salud hasta ese mes sería aproximadamente de:',
-    image: '/images/acumulados_salud.png',
+    image: 'acumulados_salud.png',
     options: [
       { key: 'A', text: '2,55 billones' },
       { key: 'B', text: '2,10 billones' },
@@ -91,7 +91,7 @@ export const QUESTIONS: Question[] = [
     id: 'q006',
     competency: Competency.Interpretation,
     statement: 'Un instructor de pilates tiene un estudio con los equipos necesarios para entrenamiento personalizado. La tabla muestra, en gris, los momentos del día que ya tiene clase con alguna persona, cada semana. ¿Cuál de las siguientes afirmaciones es incorrecta?',
-    image: '/images/pilates.png',
+    image: 'pilates.png',
     options: [
       { key: 'A', text: 'Hay más horas disponibles de 8 a.m. a 1 p.m. que de 1 p.m. a 7 p.m.' },
       { key: 'B', text: 'Todos los días hay 5 horas disponibles.' },
@@ -105,7 +105,7 @@ export const QUESTIONS: Question[] = [
     id: 'q007',
     competency: Competency.Interpretation,
     statement: 'En la gráfica se muestran los resultados de cinco jugadores de tenis. En Australia y Estados Unidos se juega en cancha dura, el Roland Garros en arcilla y el Wimbledon en césped. Considerando solamente los torneos jugados en cancha dura, ¿cuál es el promedio de torneos ganados por los cinco jugadores?',
-    image: '/images/torneos.png',
+    image: 'torneos.png',
     options: [
       { key: 'A', text: '1,2 torneos' },
       { key: 'B', text: '2,0 torneos' },
@@ -119,7 +119,7 @@ export const QUESTIONS: Question[] = [
     id: 'q008',
     competency: Competency.Interpretation,
     statement: 'El subsidio familiar de vivienda (SFV) es un aporte que entrega el Estado. Una familia con ingresos entre 0 y 1 SMMLV recibe un subsidio equivalente a:',
-    image: '/images/subsidio.png',
+    image: 'subsidio.png',
     options: [
       { key: 'A', text: '1,4 veces el subsidio de una familia de ingresos entre 2 y 2,25 SMMLV.' },
       { key: 'B', text: '1,8 veces el subsidio de una familia de ingresos entre 2,5 y 2,75 SMMLV.' },
@@ -133,7 +133,7 @@ export const QUESTIONS: Question[] = [
     id: 'q009',
     competency: Competency.Interpretation,
     statement: 'El presupuesto del país se repartió en 2008 de acuerdo con la cantidad de habitantes de cada región. La gráfica que representa correctamente la distribución del presupuesto debe mostrar que:',
-    image: '/images/presupuesto.png',
+    image: 'presupuesto.png',
     options: [
       { key: 'A', text: 'Las regiones M y N tienen sectores iguales.' },
       { key: 'B', text: 'La región O tiene el sector más pequeño.' },
@@ -147,7 +147,7 @@ export const QUESTIONS: Question[] = [
     id: 'q010',
     competency: Competency.Interpretation,
     statement: 'Un científico estudia el comportamiento de cinco aves durante cuatro sesiones de 30 minutos cada una. ¿Cuál de las aves presenta las siguientes características: Tarda el doble del tiempo o más en alimentarse que en descansar, y la defecación dura menos del 10% del tiempo total de las sesiones?',
-    image: '/images/aves.png',
+    image: 'aves.png',
     options: [
       { key: 'A', text: 'Ave 1' },
       { key: 'B', text: 'Ave 2' },
@@ -161,7 +161,7 @@ export const QUESTIONS: Question[] = [
     id: 'q011',
     competency: Competency.Interpretation,
     statement: 'Las pistas de aterrizaje de los aeropuertos se marcan en sus extremos de acuerdo con su alineación con el norte magnético. Una pista marcada en un extremo con el número 24, en el extremo opuesto está marcada con el número:',
-    image: '/images/aviones.png',
+    image: 'aviones.png',
     options: [
       { key: 'A', text: '06' },
       { key: 'B', text: '18' },
@@ -175,7 +175,7 @@ export const QUESTIONS: Question[] = [
     id: 'q012',
     competency: Competency.Formulation,
     statement: 'Una microempresa elabora jabón líquido en presentaciones de 300mL, 500mL y 700mL. Un tanque almacena la cantidad exacta para envasar 50 unidades de cada tipo. Si 1 Litro = 1.000 mL, ¿cuál es la capacidad del tanque?',
-    image: '/images/jabon.png',
+    image: 'jabon.png',
     options: [
       { key: 'A', text: '15 litros' },
       { key: 'B', text: '75 litros' },
@@ -189,7 +189,7 @@ export const QUESTIONS: Question[] = [
     id: 'q013',
     competency: Competency.Interpretation,
     statement: 'La tabla muestra el total de sismos registrados en el planeta durante la primera década del siglo XXI. Un sismólogo afirma que en cualquier año era más probable que hubiese sismos de baja que de alta magnitud. La relación que justifica esta opinión es:',
-    image: '/images/sismos.png',
+    image: 'sismos.png',
     options: [
       { key: 'A', text: 'A mayor magnitud, mayor cantidad de sismos.' },
       { key: 'B', text: 'A mayor magnitud, menor cantidad de sismos.' },
@@ -203,7 +203,7 @@ export const QUESTIONS: Question[] = [
     id: 'q014',
     competency: Competency.Formulation,
     statement: 'En la primera década del siglo XXI, el total de sismos registrados (incluyendo <5.0) fue de 36.919. Los sismos de magnitud entre 8,0 y 8,9 fueron 12. ¿Cuál es la proporción aproximada?',
-    image: '/images/sismos.png',
+    image: 'sismos.png',
     options: [
       { key: 'A', text: '1 de cada 3.000 sismos.' },
       { key: 'B', text: '1 de cada 12 sismos.' },
@@ -217,7 +217,7 @@ export const QUESTIONS: Question[] = [
     id: 'q015',
     competency: Competency.Interpretation,
     statement: 'Antes de fallecer, la señora Antonia organizó su testamento heredando a sus sobrinos y a los hijos de estos. La señora Antonia tiene una casa que actualmente vale $240.000.000 y un porcentaje en un apartamento que actualmente vale $160.000.000. ¿Qué parte de la herencia le corresponde a Patricia?',
-    image: '/images/herencia.png',
+    image: 'herencia.png',
     options: [
       { key: 'A', text: 'La quinta parte.' },
       { key: 'B', text: 'La décima parte.' },
@@ -231,7 +231,7 @@ export const QUESTIONS: Question[] = [
     id: 'q016',
     competency: Competency.Interpretation,
     statement: 'La gráfica muestra la inversión que hizo un país en temas de seguridad vial durante 7 años. Durante el período 1996 – 2002, los años en los que se hizo mayor inversión en seguridad vial fueron:',
-    image: '/images/seguridad_vial.png',
+    image: 'seguridad_vial.png',
     options: [
       { key: 'A', text: '1996 y 1997' },
       { key: 'B', text: '1998 y 1999' },
@@ -245,7 +245,7 @@ export const QUESTIONS: Question[] = [
     id: 'q017',
     competency: Competency.Formulation,
     statement: 'Para una fiesta infantil se tiene una fuente de chocolate con tres niveles, cuyos recipientes son cilíndricos. El organizador mide la altura y el radio del recipiente inferior para estimar la capacidad total de la fuente. ¿Es suficiente esta información?',
-    image: '/images/fuente_chocolate.png',
+    image: 'fuente_chocolate.png',
     options: [
       { key: 'A', text: 'No son suficientes, pues falta conocer el peso del chocolate.' },
       { key: 'B', text: 'Son suficientes, pues el recipiente más bajo recibe el chocolate de los otros.' },
@@ -259,7 +259,7 @@ export const QUESTIONS: Question[] = [
     id: 'q018',
     competency: Competency.Formulation,
     statement: 'Un aspirante de 600 es admitido si supera la prueba I y está entre los mejores puntajes de la prueba II (máximo 16% de los aspirantes de su grupo). Si hay 4 grupos de 150 aspirantes cada uno, ¿ser admitido es suficiente con estar entre los mejores X puntajes de su grupo en la prueba II?',
-    image: '/images/aspirantes.png',
+    image: 'aspirantes.png',
     options: [
       { key: 'A', text: 'los mejores 16 puntajes' },
       { key: 'B', text: 'los mejores 24 puntajes' },
@@ -273,7 +273,7 @@ export const QUESTIONS: Question[] = [
     id: 'q019',
     competency: Competency.Interpretation,
     statement: 'La tabla muestra datos del proceso de admisión. La universidad publica una lista con los resultados de la prueba II de todos los aspirantes que la presentaron. Uno de ellos obtuvo el puesto 95 y superó el puntaje mínimo. La conclusión del aspirante sobre estar admitido no necesariamente es válida porque:',
-    image: '/images/aspirantes2.png',
+    image: 'aspirantes2.png',
     options: [
       { key: 'A', text: 'Debe considerar su posición solo dentro de su grupo.' },
       { key: 'B', text: 'El puntaje mínimo varía según el grupo.' },
@@ -287,7 +287,7 @@ export const QUESTIONS: Question[] = [
     id: 'q020',
     competency: Competency.Argumentation,
     statement: 'La tabla muestra la distribución de los aspirantes clasificados en los grupos B y D. Un análisis de los datos muestra una inconsistencia en:',
-    image: '/images/aspirantes3.png',
+    image: 'aspirantes3.png',
     options: [
       { key: 'A', text: 'el número de personas que aprobaron la prueba II en el grupo C.' },
       { key: 'B', text: 'el puntaje promedio del grupo A en la prueba I.' },
@@ -301,7 +301,7 @@ export const QUESTIONS: Question[] = [
     id: 'q021',
     competency: Competency.Formulation,
     statement: 'Al piloto de un avión que está alineado para aterrizar en el extremo 24 se le pide que cambie su rumbo girando 30 grados a su derecha para que use una pista libre. El número que encuentra en la nueva pista es:',
-    image: '/images/aviones.png',
+    image: 'aviones.png',
     options: [
       { key: 'A', text: '06' },
       { key: 'B', text: '21' },
@@ -315,7 +315,7 @@ export const QUESTIONS: Question[] = [
     id: 'q022',
     competency: Competency.Interpretation,
     statement: 'Un instructor de pilates tiene la agenda mostrada en la tabla 2. ¿Cuál de las siguientes afirmaciones es incorrecta?',
-    image: '/images/pilates.png',
+    image: 'pilates.png',
     options: [
       { key: 'A', text: 'Hay más horas disponibles en la mañana que en la tarde.' },
       { key: 'B', text: 'Todos los días hay exactamente 5 horas disponibles.' },
@@ -329,7 +329,7 @@ export const QUESTIONS: Question[] = [
     id: 'q023',
     competency: Competency.Formulation,
     statement: 'De acuerdo con la información de la tabla de jabones, si se conservara la relación entre el contenido y el precio por unidad, ¿cuál debería ser el precio de la presentación de jabón líquido con contenido de 1.800 mL?',
-    image: '/images/jabon.png',
+    image: 'jabon.png',
     options: [
       { key: 'A', text: '$12.000' },
       { key: 'B', text: '$15.000' },
@@ -357,7 +357,7 @@ export const QUESTIONS: Question[] = [
     id: 'q025',
     competency: Competency.Formulation,
     statement: 'La etiqueta del jabón debe especificar tres aspectos: presentación, contenido y aroma. [TABLA DE REFERENCIA: Muestra que hay 2 presentaciones (frasco, envase), 3 contenidos (300mL, 500mL, 700mL) disponibles en 3 aromas cada uno (natural, coco, vainilla)]. De acuerdo con esta información, ¿cuántas etiquetas diferentes debe utilizar la fábrica?',
-    image: '/images/jabon.png',
+    image: 'jabon.png',
     options: [
       { key: 'A', text: '9 etiquetas diferentes' },
       { key: 'B', text: '12 etiquetas diferentes' },
@@ -371,7 +371,7 @@ export const QUESTIONS: Question[] = [
     id: 'q026',
     competency: Competency.Argumentation,
     statement: 'A partir de los datos de la tabla de sismos, una persona predice que en el 2011 se presentarán exactamente 173 sismos de magnitud igual o superior a 6,0 grados. Esta predicción es:',
-    image: '/images/sismos.png',
+    image: 'sismos.png',
     options: [
       { key: 'A', text: 'Válida, porque ese es el promedio de sismos de esa magnitud en la década.' },
       { key: 'B', text: 'Inválida, porque los sismos no siguen un patrón exacto año tras año.' },
@@ -385,7 +385,7 @@ export const QUESTIONS: Question[] = [
     id: 'q027',
     competency: Competency.Formulation,
     statement: 'La inversión en seguridad vial se realiza el 10 de enero de cada año. En enero 10 de 2002, un euro equivalía a 2.800 pesos colombianos aproximadamente. Si se quiere calcular el valor de la inversión en pesos colombianos para ese año, se debe:',
-    image: '/images/seguridad_vial.png',
+    image: 'seguridad_vial.png',
     options: [
       { key: 'A', text: 'Multiplicar el valor en euros por 2.800' },
       { key: 'B', text: 'Dividir el valor en euros entre 2.800' },
@@ -399,7 +399,7 @@ export const QUESTIONS: Question[] = [
     id: 'q028',
     competency: Competency.Interpretation,
     statement: 'Los resultados del estudio de las aves indican que el ave 5 tarda más alimentándose que desplazándose. El tiempo adicional que tarda en alimentación comparado con el desplazamiento es de:',
-    image: '/images/aves.png',
+    image: 'aves.png',
     options: [
       { key: 'A', text: '15 minutos' },
       { key: 'B', text: '20 minutos' },
@@ -413,7 +413,7 @@ export const QUESTIONS: Question[] = [
     id: 'q029',
     competency: Competency.Formulation,
     statement: '¿Cuál de los siguientes cocientes permite estimar mejor la cantidad de sismos mensuales durante la década estudiada?',
-    image: '/images/sismos.png',
+    image: 'sismos.png',
     options: [
       { key: 'A', text: 'Total de sismos de cada año dividido entre 12' },
       { key: 'B', text: 'Suma de sismos de magnitud superior a 5.0 dividida entre 120' },
@@ -427,7 +427,7 @@ export const QUESTIONS: Question[] = [
     id: 'q030',
     competency: Competency.Interpretation,
     statement: 'La gráfica que muestra el porcentaje de ejecución del presupuesto, correspondiente al promedio 2002-2012, en cada mes es:',
-    image: '/images/porcentaje_ejecucion.png',
+    image: 'porcentaje_ejecucion.png',
     options: [
       { key: 'A', text: 'Una línea recta ascendente' },
       { key: 'B', text: 'Una curva exponencial' },
@@ -441,7 +441,7 @@ export const QUESTIONS: Question[] = [
     id: 'q031',
     competency: Competency.Formulation,
     statement: 'La microempresa de productos de aseo otorga incentivos a los vendedores cuyas ventas semanales sean superiores a $500.000. La tabla muestra los registros de ventas de tres vendedores durante una semana. ¿Cuántos vendedores recibirán el incentivo?',
-    image: '/images/jabon2.png',
+    image: 'jabon2.png',
     options: [
       { key: 'A', text: 'Ningún vendedor' },
       { key: 'B', text: 'Solo un vendedor' },
@@ -455,7 +455,7 @@ export const QUESTIONS: Question[] = [
     id: 'q032',
     competency: Competency.Formulation,
     statement: 'Con base en la tabla de subsidio familiar de vivienda (SFV), para estimar el valor del crédito que debe solicitarse al banco se debe calcular:',
-    image: '/images/subsidio.png',
+    image: 'subsidio.png',
     options: [
       { key: 'A', text: 'Valor vivienda - (SFV + ahorro)' },
       { key: 'B', text: 'Valor vivienda + (SFV + ahorro)' },
@@ -469,7 +469,7 @@ export const QUESTIONS: Question[] = [
     id: 'q033',
     competency: Competency.Argumentation,
     statement: 'Según la tabla de torneos de tenis, se desea saber cuál de los jugadores que aparecen en la gráfica consiguió un mayor porcentaje de victorias en las finales del Grand Slam. La conclusión de que fue el jugador C es incorrecta porque:',
-    image: '/images/torneos.png',
+    image: 'torneos.png',
     options: [
       { key: 'A', text: 'No ganó Roland Garros antes de los 24 años' },
       { key: 'B', text: 'El jugador A tiene 100% de torneos ganados' },
@@ -483,7 +483,7 @@ export const QUESTIONS: Question[] = [
     id: 'q034',
     competency: Competency.Interpretation,
     statement: 'En la institución educativa con dos cursos de grado undécimo mostrados en la tabla, ¿cuál es la proporción de mujeres respecto al total de estudiantes?',
-    image: '/images/cursos.png',
+    image: 'cursos.png',
     options: [
       { key: 'A', text: '3/5 del total' },
       { key: 'B', text: '2/3 del total' },
@@ -497,7 +497,7 @@ export const QUESTIONS: Question[] = [
     id: 'q035',
     competency: Competency.Interpretation,
     statement: 'Observando la tabla de ingresos y subsidios de vivienda, una persona que observa la información elabora una gráfica. La representación más adecuada debería mostrar que:',
-    image: '/images/ingreso_subsidio.png',
+    image: 'ingreso_subsidio.png',
     options: [
       { key: 'A', text: 'A mayor ingreso, mayor subsidio' },
       { key: 'B', text: 'A mayor ingreso, menor subsidio' },
@@ -511,7 +511,7 @@ export const QUESTIONS: Question[] = [
     id: 'q036',
     competency: Competency.Formulation,
     statement: 'Según la tabla del proceso de admisión universitaria y el esquema mostrado, si hay 600 aspirantes y cada grupo tiene 150 aspirantes, para ser admitido es suficiente que un aspirante:',
-    image: '/images/aspirantes.png',
+    image: 'aspirantes.png',
     options: [
       { key: 'A', text: 'Apruebe la prueba I solamente' },
       { key: 'B', text: 'Esté entre los mejores 24 de su grupo en la prueba II' },
@@ -525,7 +525,7 @@ export const QUESTIONS: Question[] = [
     id: 'q037',
     competency: Competency.Interpretation,
     statement: 'El porcentaje de aumento en la ejecución del presupuesto en mayo de 2013, en comparación con el mes anterior, fue del 7%. Para verificar esta afirmación, se debe:',
-    image: '/images/acumulados_salud.png',
+    image: 'acumulados_salud.png',
     options: [
       { key: 'A', text: 'Comparar directamente los porcentajes de abril y mayo' },
       { key: 'B', text: 'Calcular la diferencia entre los porcentajes acumulados' },
@@ -539,7 +539,7 @@ export const QUESTIONS: Question[] = [
     id: 'q038',
     competency: Competency.Formulation,
     statement: 'Considerando el diseño de la fuente de chocolate de tres niveles, para calcular el volumen total de chocolate que puede contener, se debe:',
-    image: '/images/fuente_chocolate.png',
+    image: 'fuente_chocolate.png',
     options: [
       { key: 'A', text: 'Sumar los volúmenes de los tres recipientes cilíndricos y restar el volumen del tubo' },
       { key: 'B', text: 'Multiplicar el volumen del recipiente más grande por tres' },
@@ -553,7 +553,7 @@ export const QUESTIONS: Question[] = [
     id: 'q039',
     competency: Competency.Interpretation,
     statement: 'Camilo quiere inscribirse a las clases de pilates y escoger el total de sesiones mensual en la que el costo por sesión sea de menor precio. Si Camilo elige tomar 2 sesiones semanales, ¿logra su propósito de que el costo por sesión sea el de menor precio?',
-    image: '/images/pilates.png',
+    image: 'pilates.png',
     options: [
       { key: 'A', text: 'Sí, porque paga menos en total' },
       { key: 'B', text: 'No, porque el costo por sesión es mayor' },
@@ -567,7 +567,7 @@ export const QUESTIONS: Question[] = [
     id: 'q040',
     competency: Competency.Argumentation,
     statement: 'De acuerdo con la tabla que muestra la ejecución del presupuesto, el porcentaje acumulado de ejecución en un mes del 2013 nunca es menor que el del mes inmediatamente anterior porque:',
-    image: '/images/acumulados_salud.png',
+    image: 'acumulados_salud.png',
     options: [
       { key: 'A', text: 'El porcentaje de cada mes es mayor que el promedio 2002-2012' },
       { key: 'B', text: 'El porcentaje de cada mes es mayor que el máximo registrado' },
@@ -581,7 +581,7 @@ export const QUESTIONS: Question[] = [
     id: 'q041',
     competency: Competency.Interpretation,
     statement: 'Según los datos de la tabla de aspirantes, del grupo que presentó la prueba II, ¿qué porcentaje aproximado logró superarla?',
-    image: '/images/aspirantes2.png',
+    image: 'aspirantes2.png',
     options: [
       { key: 'A', text: '85%' },
       { key: 'B', text: '75%' },
@@ -595,7 +595,7 @@ export const QUESTIONS: Question[] = [
     id: 'q042',
     competency: Competency.Formulation,
     statement: 'En la distribución del presupuesto por regiones, si el sector "Resto del país" representa el 40% del total, y las regiones M y O tienen sectores iguales que suman el 35%, ¿qué porcentaje representa cada una de las regiones N y P?',
-    image: '/images/presupuesto.png',
+    image: 'presupuesto.png',
     options: [
       { key: 'A', text: '12.5% cada una' },
       { key: 'B', text: '15% cada una' },
@@ -609,7 +609,7 @@ export const QUESTIONS: Question[] = [
     id: 'q043',
     competency: Competency.Interpretation,
     statement: 'Un avión que despega en dirección al extremo 32 de la pista, va hacia el:',
-    image: '/images/aviones.png',
+    image: 'aviones.png',
     options: [
       { key: 'A', text: 'Noreste' },
       { key: 'B', text: 'Noroeste' },
@@ -623,7 +623,7 @@ export const QUESTIONS: Question[] = [
     id: 'q044',
     competency: Competency.Formulation,
     statement: 'El promedio anual de sismos en la primera década del siglo XXI fue 3.783. Los años con el número de sismos más cercano y más lejano al promedio son:',
-    image: '/images/sismos.png',
+    image: 'sismos.png',
     options: [
       { key: 'A', text: '2004 y 2007' },
       { key: 'B', text: '2003 y 2010' },
@@ -637,7 +637,7 @@ export const QUESTIONS: Question[] = [
     id: 'q045',
     competency: Competency.Argumentation,
     statement: 'Patricia afirma que, de la forma en que su tía repartió el dinero de sus bienes, ella obtendrá más dinero que si la herencia se dividiera en partes iguales entre los familiares vivos según el esquema. Esta afirmación es:',
-    image: '/images/herencia.png',
+    image: 'herencia.png',
     options: [
       { key: 'A', text: 'Correcta, porque recibe la parte de su madre' },
       { key: 'B', text: 'Incorrecta, porque solo recibe la mitad de una quinta parte' },
@@ -651,7 +651,7 @@ export const QUESTIONS: Question[] = [
     id: 'q046',
     competency: Competency.Formulation,
     statement: 'Según la tabla 1 del instructor de pilates, si una persona toma 3 sesiones semanales, el costo por sesión es:',
-    image: '/images/pilates.png',
+    image: 'pilates.png',
     options: [
       { key: 'A', text: '$25.000' },
       { key: 'B', text: '$30.000' },
@@ -665,7 +665,7 @@ export const QUESTIONS: Question[] = [
     id: 'q047',
     competency: Competency.Interpretation,
     statement: 'Analizando los resultados en torneos de Grand Slam según la superficie de juego, ¿qué jugador mostró mejor desempeño en canchas duras (Australia y EE.UU.) en comparación con otras superficies?',
-    image: '/images/torneos.png',
+    image: 'torneos.png',
     options: [
       { key: 'A', text: 'Jugador A' },
       { key: 'B', text: 'Jugador B' },
@@ -679,7 +679,7 @@ export const QUESTIONS: Question[] = [
     id: 'q048',
     competency: Competency.Formulation,
     statement: 'Con base en la tabla de pilates, si un nuevo cliente desea tomar el paquete de menor costo por sesión y tiene disponibilidad completa, ¿cuántas sesiones semanales debería tomar?',
-    image: '/images/pilates.png',
+    image: 'pilates.png',
     options: [
       { key: 'A', text: '2 sesiones' },
       { key: 'B', text: '3 sesiones' },
@@ -693,7 +693,7 @@ export const QUESTIONS: Question[] = [
     id: 'q049',
     competency: Competency.Formulation,
     statement: 'En 2005, aproximadamente el 60% de la población del país son hombres. Para calcular el número de mujeres en el país se proponen dos métodos: I) Restar el 60% de la población total. II) Multiplicar la población total por dos quintos (40%). ¿Cuál(es) método(s) es(son) correcto(s)?',
-    image: '/images/poblacion.png',
+    image: 'poblacion.png',
     options: [
       { key: 'A', text: 'Solo I' },
       { key: 'B', text: 'Solo II' },
@@ -707,7 +707,7 @@ export const QUESTIONS: Question[] = [
     id: 'q050',
     competency: Competency.Interpretation,
     statement: 'Según la tabla que muestra la distribución de los aspirantes en los grupos B y D por calificación, se puede afirmar que:',
-    image: '/images/aspirantes3.png',
+    image: 'aspirantes3.png',
     options: [
       { key: 'A', text: 'El grupo B tiene mejor promedio general' },
       { key: 'B', text: 'Hay más estudiantes en el grupo D' },
@@ -721,7 +721,7 @@ export const QUESTIONS: Question[] = [
     id: 'q051',
     competency: Competency.Argumentation,
     statement: 'En el análisis de los aspirantes clasificados en los grupos B y D, al comparar las distribuciones de calificaciones, se puede concluir que:',
-    image: '/images/aspirantes3.png',
+    image: 'aspirantes3.png',
     options: [
       { key: 'A', text: 'La distribución es igual en ambos grupos' },
       { key: 'B', text: 'El grupo B tiene mayor dispersión de calificaciones' },
