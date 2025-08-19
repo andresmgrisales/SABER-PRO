@@ -70,16 +70,14 @@ export const QuizScreen: React.FC<QuizScreenProps> = ({ questions, onFinish }) =
         {question.image && (
           <div className="my-4 flex justify-center bg-slate-50 p-2 rounded-lg border border-slate-200">
             <img 
-              src={`https://raw.githubusercontent.com/andresmgrisales/SABER-PRO/main/public/images/${question.image.replace('/images/', '').replace('./images/', '')}`}
+              src={`https://raw.githubusercontent.com/andresmgrisales/saber-pro-images/main/${question.image.replace('/images/', '').replace('./images/', '')}`}
               alt="Referencia para la pregunta" 
               className="max-w-full md:max-w-lg h-auto object-contain rounded-md"
+              onLoad={() => console.log('✅ Image loaded from separate repo:', question.image)}
               onError={(e) => {
-                console.log('Error loading image:', question.image);
-                (e.target as HTMLImageElement).style.display = 'none';
-                const errorDiv = document.createElement('div');
-                errorDiv.className = 'bg-red-50 border border-red-200 rounded p-4 text-red-700 text-center';
-                errorDiv.innerHTML = `⚠️ Imagen requerida: ${question.image}`;
-                (e.target as HTMLImageElement).parentNode?.appendChild(errorDiv);
+                console.log('❌ Error loading image from separate repo:', question.image);
+                // Fallback al repositorio original como último recurso
+                (e.target as HTMLImageElement).src = `https://raw.githubusercontent.com/andresmgrisales/SABER-PRO/main/public/images/${question.image.replace('/images/', '').replace('./images/', '')}`;
               }}
             />
           </div>
