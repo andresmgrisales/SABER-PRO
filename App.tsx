@@ -99,10 +99,27 @@ export const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 py-8 px-4">
-      <div className="max-w-4xl mx-auto">
-        {renderGameState()}
+    <div className="min-h-screen bg-slate-50 flex flex-col">
+      <div className="flex-1 py-8 px-4">
+        <div className="max-w-4xl mx-auto">
+          {renderGameState()}
+        </div>
       </div>
+      
+      {/* Footer */}
+      <footer className="bg-slate-800 text-slate-300 py-6 px-4 mt-auto">
+        <div className="max-w-4xl mx-auto text-center">
+          <p className="text-sm leading-relaxed">
+            Desarrollado por <span className="font-semibold text-slate-100">Andrés Mauricio Grisales A.</span>
+          </p>
+          <p className="text-xs mt-2 text-slate-400">
+            En el marco del desarrollo de estrategias para preparación en Saber Pro
+          </p>
+          <p className="text-xs text-slate-400">
+            Universidad Católica Luis Amigó, Manizales • 2025
+          </p>
+        </div>
+      </footer>
     </div>
   );
 };
